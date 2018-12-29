@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<ModInfo>
+		<Name value="Better Levels" />
+		<Description value="Removes the level gates from from perks" />
+		<Author value="Kath" />
+		<Version value="1" />
+
+</ModInfo>
+</xml>
