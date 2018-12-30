@@ -8,7 +8,7 @@
 <!-- Descriptions -->
 
 <!--perception-->
-	<set xpath="/progression/attributes/attribute[@name='attPerception']/level_requirements[@level='4']/requirement/@desc_key">reqGenericPoints01</set>
+	<set xpath="/progression/attributes/attribute[@name='attPerception']/level_requirements[@level='3']/requirement/@desc_key">reqGenericPoints01</set>
 	<set xpath="/progression/attributes/attribute[@name='attPerception']/level_requirements[@level='5']/requirement/@desc_key">reqGenericPoints01</set>
 	<set xpath="/progression/attributes/attribute[@name='attPerception']/level_requirements[@level='6']/requirement/@desc_key">reqGenericPoints01</set>
 	<set xpath="/progression/attributes/attribute[@name='attPerception']/level_requirements[@level='7']/requirement/@desc_key">reqGenericPoints01</set>
