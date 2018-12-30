@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configs>
+
+<append xpath="/quests">
+
+	<quest id="challenge_Useful Books">
+		<property name="name_key" value="Useful Books" />
+		<property name="subtitle_key" value="Congrats, u got 2 skill points. OOF " />
+		<property name="description_key" value="Congrats, u got 2 skill points. OOF" />
+		<property name="icon" value="ui_game_symbol_loot_sack" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="offer_key" value="Read this useful book carefully, cause u  will learn something. OOF" />
+		<property name="difficulty" value="easy" />
+		<reward type="SkillPoints" value="2"/>
+	</quest>
+	
+</append>
+
+</configs>

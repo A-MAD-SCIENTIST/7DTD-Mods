@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configs>
+
+<!-- add Useful Books to loot -->
+<append xpath="/lootcontainers/lootgroup[@name='perkMagazines']">
+<item name="Useful Books"/>
+</append>
+
+<!-- loot probability
+<set xpath="/lootcontainers/lootgroup[@name='books']/item[@group='perkMagazines']/@prob">0.1</set>
+-->
+
+</configs>
