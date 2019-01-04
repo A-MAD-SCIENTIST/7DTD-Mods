@@ -1,0 +1,42 @@
+<BetterBalanceMod>
+<!-- Player -->
+	<!-- Bag mod -->
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity']/@value">60</set>
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize']/@value">60</set>
+	<!-- Jump over 2 blocks high -->
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='JumpStrength']/@value">0.2</set>
+	<!-- Reduce impact of lack of food and health on overall health and stamina -->
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='WaterLossPerHealthPointGained']/@value">0.04</set>
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='WaterLossPerStaminaPointGained']/@value">0.006</set>
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='HealthLossMaxMult']/@value">0.08</set>
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='StaminaLossMaxMult']/@value">0.003</set>
+	<!-- Reduce impact of running, jumping and swimming -->
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='StaminaChangeOT' and @tags='running']/@value">1.3</set>
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='StaminaLoss' and @tags='jumping']/@value">8</set>
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='StaminaLoss' and @tags='swimming']/@value">30</set>
+<!-- Loot and player bag remain for longer -->
+		<set xpath="/entity_classes/entity_class[@name='Backpack']/property[@name='TimeStayAfterDeath']/@value">3600</set>
+		<set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='TimeStayAfterDeath']/@value">240</set>
+		<set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular']/property[@name='TimeStayAfterDeath']/@value">1200</set>
+		<set xpath="/entity_classes/entity_class[@name='EntityLootContainerStrong']/property[@name='TimeStayAfterDeath']/@value">1200</set>
+		<set xpath="/entity_classes/entity_class[@name='EntityLootContainerBoss']/property[@name='TimeStayAfterDeath']/@value">1200</set>
+		<set xpath="/entity_classes/entity_class[@name='EntityLootContainerBandit']/property[@name='TimeStayAfterDeath']/@value">1200</set>
+<!-- Zombies -->
+	<!-- Zs stay down for longer -->
+		<set xpath="/entity_classes/entity_class/property[@name='KnockdownProneStunDuration']/@value">1.5,4.0</set>
+		<set xpath="/entity_classes/entity_class/property[@name='KnockdownKneelStunDuration']/@value">1.5,4.0</set>
+	<!-- Reduce jumping distances -->
+		<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='JumpMaxDistance']/@value">2.2</set>
+		<set xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='JumpMaxDistance']/@value">3</set>
+		<set xpath="/entity_classes/entity_class[@name='zombieSpider']/property[@name='JumpMaxDistance']/@value">4</set>
+		<set xpath="/entity_classes/entity_class[@name='zombieSpiderFeral']/property[@name='JumpMaxDistance']/@value">6</set>
+	<!-- Increase loot drop chance -->
+		<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='LootDropProb']/@value">0.15</set>
+	<!-- Increase bone harvesting -->
+		<set xpath="/entity_classes/entity_class/drop[@event='Harvest' and @tag='butcherHarvest']/@count">3,5</set>
+	<!-- How long the Z body remains -->
+		<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='TimeStayAfterDeath']/@value">20</set>
+</BetterBalanceMod>
+<!--
+WIP
+-->

@@ -1,0 +1,262 @@
+<BetterBalanceMod>
+<!-- Vulture fix -->
+	<set xpath="/items/item[@name='meleeHandAnimalZombieVulture']/property[@class='Action0']/property[@name='DamageEntity']/@value">4</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieVulture']/effect_group[@name='Base Effects']/passive_effect[@name='BuffProcChance' and @tags='buffIllInfection0']/@value">0.10</set>
+	<remove xpath="/items/item[@name='meleeHandAnimalZombieVulture']/property[@class='Action1']" />
+<!-- Zombie nerf -->
+	<!-- General -->
+	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='Delay']/@value">1</set>
+	<!-- Range -->
+	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='Range']/@value">1.4</set>
+	<set xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']/property[@name='Range']/@value">1.4</set>
+	<set xpath="/items/item[@name='meleeHandAnimalBear']/property[@class='Action0']/property[@name='Range']/@value">2</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieBear']/property[@class='Action0']/property[@name='Range']/@value">2</set>
+	<set xpath="/items/item[@name='meleeHandAnimalSnake']/property[@class='Action0']/property[@name='Range']/@value">1</set>
+	<set xpath="/items/item[@name='meleeHandAnimalWolf']/property[@class='Action0']/property[@name='Range']/@value">1.75</set>
+	<append xpath="/items/item[@name='meleeHandPlayer']/property[@class='Action0']">
+			<property name="Range" value="1.65"/>
+	</append>
+	<!-- Stop Zs eating through hard materials -->
+	<append xpath="/items/item[@name='meleeHandMaster']/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="concrete,metal,stone"/>
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'meleeHandZombie')]/effect_group[@name='Base Effects']">	
+			<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="concrete,metal,stone"/>
+	</append>
+	<!-- Reduced block damage -->
+	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='DamageBlock']/@value">8</set>	
+	<set xpath="/items/item[@name='meleeHandZombie01']/effect_group[@name='Base Effects']/passive_effect[@name='BlockDamage']/@value">8</set>
+	<set xpath="/items/item[@name='meleeHandZombie02Feral']/property[@class='Action0']/property[@name='DamageBlock']/@value">30</set>	
+	<set xpath="/items/item[@name='meleeHandZombieBehemoth']/property[@class='Action0']/property[@name='DamageBlock']/@value">800</set>	
+	<set xpath="/items/item[@name='meleeHandZombieBurning']/property[@class='Action0']/property[@name='DamageBlock']/@value">2</set>	
+	<set xpath="/items/item[@name='meleeHandZombieBurningCrawler']/property[@class='Action0']/property[@name='DamageBlock']/@value">2</set>	
+	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">16</set>	
+	<set xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']/property[@name='DamageBlock']/@value">30</set>
+	<set xpath="/items/item[@name='meleeHandZombieCopFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">40</set>	
+	<set xpath="/items/item[@name='meleeHandZombieFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">30</set>	
+	<set xpath="/items/item[@name='meleeHandZombieFootballPlayerFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">30</set>	
+	<set xpath="/items/item[@name='meleeHandZombieHazMatFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">30</set>	
+	<set xpath="/items/item[@name='meleeHandZombieStripperFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">30</set>	
+	<set xpath="/items/item[@name='meleeHandZombieStrong']/property[@class='Action0']/property[@name='DamageBlock']/@value">16</set>	
+	<set xpath="/items/item[@name='meleeHandZombieStrongFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">30</set>	
+	<set xpath="/items/item[@name='meleeHandZombieWorker']/property[@class='Action0']/property[@name='DamageBlock']/@value">16</set>	
+	<set xpath="/items/item[@name='meleeHandZombieWorkerFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">30</set>
+	<!-- Z vomit removal -->
+	<remove xpath="/items/item[starts-with(@name, 'meleeHandZombieCop')]/property[@class='Action1']" />
+<!-- Weapons mods -->
+	<!-- Sniper rifle 10 rounds -->
+	<set xpath="/items/item[@name='gunMR10']/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize']/@value">10</set>
+	<!-- Quicker crossbow reload -->
+	<set xpath="/items/item[@name='gunCrossbow']/effect_group[@name='Base Effects']/passive_effect[@name='ReloadSpeedMultiplier']/@value">.75</set>
+	<!-- Sledge hammer -->
+		<set xpath="/items/item[@name='meleeToolSledgehammer']/effect_group[@name='Power Attack']/passive_effect[@name='StaminaLoss'][@operation='base_add']/@value">60</set>
+	<!-- Increased bullet damage -->
+	<append xpath="/items/item[starts-with(@name, 'ammo9mmBullet')]/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="3.62" tags="head"/>			
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'ammo44MagnumBullet')]/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="3.62" tags="head"/>			
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'ammo762mmBullet')]/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="3.62" tags="head"/>			
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'ammoShotgun')]/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="3.62" tags="head"/>			
+	</append>	
+	<append xpath="/items/item[starts-with(@name, 'ammoBlunderbuss')]/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="3.62" tags="head"/>			
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'ammoRocket')]/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="3.62" tags="head"/>			
+	</append>
+	<!-- Increased arrow damage -->
+	<append xpath="/items/item[starts-with(@name, 'ammoArrow')]/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2.2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="4" tags="head"/>			
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'ammoCrossbowBolt')]/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2.2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="4" tags="head"/>			
+	</append>
+<!-- Misc -->
+	<append xpath="/items">
+		<item name="armorMiningHelmetMilitary">
+			<property name="Extends" value="armorMiningHelmet"/>
+			<property name="CustomIcon" value="armorMiningHelmet"/> <property name="CustomIconTint" value="26,255,140"/>
+			<property class="UMA">
+				<property name="Overlay0Tint" value="26,255,140"/>
+			</property>
+		</item>
+		<item name="armorMiningHelmetSteel">
+			<property name="Extends" value="armorMiningHelmet"/>
+			<property name="CustomIcon" value="armorMiningHelmet"/> <property name="CustomIconTint" value="255,26,255"/>
+			<property class="UMA">
+				<property name="Overlay0Tint" value="255,26,255"/>
+			</property>
+		</item>
+		<item name="armorMiningHelmetSwat">
+			<property name="Extends" value="armorMiningHelmet"/>
+			<property name="CustomIcon" value="armorMiningHelmet"/> <property name="CustomIconTint" value="26,117,255"/>
+			<property class="UMA">
+				<property name="Overlay0Tint" value="26,117,255"/>
+			</property>
+		</item>
+	</append>
+<!-- Tool tweaks -->
+	<!-- Base building tools upgrade speed up -->
+			<set xpath="/items/item[@name='gunToolNailgun']/property[@class='Action1']/property[@name='Delay']/@value">0.32</set>
+			<set xpath="/items/item[@name='meleeToolStoneAxe']/property[@class='Action1']/property[@name='Delay']/@value">0.46</set>
+			<set xpath="/items/item[@name='meleeToolClawHammer']/property[@class='Action1']/property[@name='Delay']/@value">0.42</set>
+	<!-- Steel tools -->
+		<!-- Pick -->
+			<set xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Base Effects']/passive_effect[@name='AttacksPerMinute'][@operation='base_set']/@value">56</set>
+			<set xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Base Effects']/passive_effect[@name='StaminaLoss'][@operation='base_set']/@value">14</set>
+			<set xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='AttacksPerMinute'][@operation='perc_add']/@value">-.15</set>
+			<set xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='StaminaLoss'][@operation='base_add']/@value">28</set>
+			<set xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='BlockDamage'][@operation='perc_add']/@value">2</set>
+		<!-- Shovel -->
+			<set xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Base Effects']/passive_effect[@name='AttacksPerMinute'][@operation='base_set']/@value">60</set>	
+			<set xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Base Effects']/passive_effect[@name='StaminaLoss'][@operation='base_set']/@value">13</set>
+			<set xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Power Attack']/passive_effect[@name='AttacksPerMinute'][@operation='perc_add']/@value">-.15</set>
+			<set xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Power Attack']/passive_effect[@name='StaminaLoss'][@operation='base_add']/@value">25</set>
+			<set xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Power Attack']/passive_effect[@name='BlockDamage'][@operation='perc_add']/@value">2</set>
+			<!-- Axe -->
+			<set xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Base Effects']/passive_effect[@name='AttacksPerMinute'][@operation='base_set']/@value">56</set>	
+			<set xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Base Effects']/passive_effect[@name='StaminaLoss'][@operation='base_set']/@value">14</set>
+			<set xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='AttacksPerMinute'][@operation='perc_add']/@value">-.15</set>
+			<set xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='StaminaLoss'][@operation='base_add']/@value">25</set>
+			<set xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='BlockDamage'][@operation='perc_add']/@value">2</set>
+	<!-- Iron tools -->
+		<!-- Pick -->
+			<set xpath="/items/item[@name='meleeToolPickaxeIron']/effect_group[@name='Base Effects']/passive_effect[@name='AttacksPerMinute'][@operation='base_set']/@value">62</set>
+			<set xpath="/items/item[@name='meleeToolPickaxeIron']/effect_group[@name='Base Effects']/passive_effect[@name='StaminaLoss'][@operation='base_set']/@value">13</set>
+			<set xpath="/items/item[@name='meleeToolPickaxeIron']/effect_group[@name='Power Attack']/passive_effect[@name='StaminaLoss'][@operation='base_add']/@value">19</set>
+			<set xpath="/items/item[@name='meleeToolPickaxeIron']/effect_group[@name='Power Attack']/passive_effect[@name='BlockDamage'][@operation='perc_add']/@value">1.75</set>
+		<!-- Shovel -->
+			<set xpath="/items/item[@name='meleeToolShovelIron']/effect_group[@name='Base Effects']/passive_effect[@name='AttacksPerMinute'][@operation='base_set']/@value">56</set>	
+			<set xpath="/items/item[@name='meleeToolShovelIron']/effect_group[@name='Base Effects']/passive_effect[@name='StaminaLoss'][@operation='base_set']/@value">13</set>
+			<set xpath="/items/item[@name='meleeToolShovelIron']/effect_group[@name='Power Attack']/passive_effect[@name='AttacksPerMinute'][@operation='perc_add']/@value">-.15</set>
+			<set xpath="/items/item[@name='meleeToolShovelIron']/effect_group[@name='Power Attack']/passive_effect[@name='StaminaLoss'][@operation='base_add']/@value">30</set>
+			<set xpath="/items/item[@name='meleeToolShovelIron']/effect_group[@name='Power Attack']/passive_effect[@name='BlockDamage'][@operation='perc_add']/@value">1.75</set>
+			<!-- Axe -->
+			<set xpath="/items/item[@name='meleeToolFireaxeIron']/effect_group[@name='Base Effects']/passive_effect[@name='AttacksPerMinute'][@operation='base_set']/@value">56</set>	
+			<set xpath="/items/item[@name='meleeToolFireaxeIron']/effect_group[@name='Base Effects']/passive_effect[@name='StaminaLoss'][@operation='base_set']/@value">14</set>
+			<set xpath="/items/item[@name='meleeToolFireaxeIron']/effect_group[@name='Power Attack']/passive_effect[@name='AttacksPerMinute'][@operation='perc_add']/@value">-.15</set>
+			<set xpath="/items/item[@name='meleeToolFireaxeIron']/effect_group[@name='Power Attack']/passive_effect[@name='StaminaLoss'][@operation='base_add']/@value">30</set>
+			<set xpath="/items/item[@name='meleeToolFireaxeIron']/effect_group[@name='Power Attack']/passive_effect[@name='BlockDamage'][@operation='perc_add']/@value">1.75</set>
+	<!-- Allow Nail gun and claw hammer to upgrade to steel -->
+		<set xpath="/items/item[@name='gunToolNailgun']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,resourceYuccaFibers,resourceNail,resourceSteelPolish</set>
+		<set xpath="/items/item[@name='meleeToolClawHammer']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,resourceYuccaFibers,resourceNail,resourceSteelPolish</set>
+<!-- Stack sizes -->
+	<set xpath="/items/item/property[@name='Stacknumber' and @value='20000']/@value">50000</set>
+	<set xpath="/items/item/property[@name='Stacknumber' and @value='6000']/@value">10000</set>
+	<set xpath="/items/item/property[@name='Stacknumber' and @value='1200']/@value">2500</set>
+	<set xpath="/items/item/property[@name='Stacknumber' and @value='1000']/@value">2500</set>
+	<set xpath="/items/item/property[@name='Stacknumber' and @value='500']/@value">1000</set>
+	<set xpath="/items/item/property[@name='Stacknumber' and @value='250']/@value">600</set>
+	<set xpath="/items/item/property[@name='Stacknumber' and @value='128']/@value">250</set>
+	<set xpath="/items/item/property[@name='Stacknumber' and @value='100']/@value">200</set>
+	<set xpath="/items/item/property[@name='Stacknumber' and @value='40']/@value">80</set>
+	<set xpath="/items/item/property[@name='Stacknumber' and @value='15']/@value">30</set>
+<!-- Water from sinks -->
+	<append xpath="/items/item[@name='drinkJarEmpty']/property[@class='Action1']">
+		<property name="Focused_blockname_6" value="cntCabinetOldSink" />
+		<property name="Focused_blockname_7" value="cntGraniteSink" />
+		<property name="Focused_blockname_8" value="utilitySink" />
+		<property name="Focused_blockname_9" value="wallHungSink" />
+	</append>
+</BetterBalanceMod>
+<!--
+WIP
+<DamageBlock - defaults>
+meleeHandZombie01 - 20
+meleeHandZombie02 - 0
+meleeHandZombie02Feral - 40
+meleeHandZombieBehemoth - 2000!!!
+meleeHandZombieBurning - 2
+meleeHandZombieBurningCrawler - 2
+meleeHandZombieBurningFeral - 24
+meleeHandZombieCop - 250
+meleeHandZombieCopFeral - 500
+meleeHandZombieCopRadiated - 0
+meleeHandZombieFeral - 40
+meleeHandZombieFootballPlayer - 0
+meleeHandZombieFootballPlayerFeral - 40
+meleeHandZombieHazMat - 0
+meleeHandZombieHazMatFeral - 40
+meleeHandZombieStripper - 0
+meleeHandZombieStripperFeral - 40
+meleeHandZombieStrong - 50
+meleeHandZombieStrongFeral - 100
+meleeHandZombieWorker - 100
+meleeHandZombieWorkerFeral - 250
+
+Magazine_items
+ammoProjectileZombieVomitFeral
+ammoProjectileZombieVomitRadiated
+
+<item name="meleeHandAnimalZombieDog">
+<item name="meleeHandAnimalBear">
+<item name="meleeHandAnimalZombieBear">
+<item name="meleeHandAnimalZombieDogFeral">
+<item name="meleeHandAnimalZombieBearFeral">
+<item name="meleeHandAnimalZombieVulture">
+<item name="meleeHandAnimalSnake">
+<item name="meleeHandAnimalWolf">
+
+		<passive_effect name="DamageModifier" operation="perc_add" value=".45" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.7" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.27" tags="metal"/>
+		
+	<append xpath="/items/item[@name='ammoArrowStone']/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2.2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="4" tags="head"/>			
+	</append>
+	<append xpath="/items/item[@name='ammoArrowIron']/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2.2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="4" tags="head"/>			
+	</append>
+	<append xpath="/items/item[@name='ammoArrowSteelAP']/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2.2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="4" tags="head"/>			
+	</append>
+	<append xpath="/items/item[@name='ammoArrowFlaming']/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2.2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="4" tags="head"/>			
+	</append>
+	<append xpath="/items/item[@name='ammoCrossbowBoltStone']/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2.2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="4" tags="head"/>			
+	</append>
+	<append xpath="/items/item[@name='ammoCrossbowBoltIron']/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2.2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="4" tags="head"/>			
+	</append>
+	<append xpath="/items/item[@name='ammoCrossbowBoltSteelAP']/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2.2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="4" tags="head"/>			
+	</append>
+	<append xpath="/items/item[@name='ammoCrossbowBoltExploding']/effect_group[@name='Base Effects']">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2.2" tags="EntityDamage"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="4" tags="head"/>			
+	</append>
+
+
+	<set xpath="/items/item[@name='gunPistol']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">2</set>
+	<set xpath="/items/item[@name='gun44Magnum']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">2</set>
+	<set xpath="/items/item[@name='gunBlunderbuss']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">2</set>
+	<set xpath="/items/item[@name='gunPumpShotgun']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">2</set>
+	<set xpath="/items/item[@name='gunRocketLauncher']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">2</set>
+
+		<set xpath="/items/item[@name='gunMR10']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">3</set>	
+		<set xpath="/items/item[@name='gunHuntingRifle']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">3</set>
+		<set xpath="/items/item[@name='gunSMG5']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">2</set>
+		<set xpath="/items/item[@name='gunAK47']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">2</set>	
+
+-->

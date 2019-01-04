@@ -1,0 +1,17 @@
+<BetterBalanceMod>
+	<set xpath="/materials/material[@id='Mgravel']/property[@name='stability_glue']/@value">30</set>
+	<set xpath="/materials/material[@id='Msand']/property[@name='stability_glue']/@value">30</set>
+	<!-- More XP for mining and resources -->
+	<set xpath="/materials/material[@id='MresourceWood']/property[@name='Experience']/@value">1.21</set>
+	<set xpath="/materials/material[@id='Mstone']/property[@name='Experience']/@value">1.21</set>
+	<set xpath="/materials/material[@id='MresourceClayLump']/property[@name='Experience']/@value">.95</set>
+	</BetterBalanceMod>
+
+<!-- WIP
+	<set xpath="/materials/material[@id='MresourceCoal']/property[@name='Experience']/@value">3.3</set>
+	<set xpath="/materials/material[@id='MresourceIronFragment']/property[@name='Experience']/@value">5</set>
+	<set xpath="/materials/material[@id='MresourceOilShale']/property[@name='Experience']/@value">3.4</set>
+	<set xpath="/materials/material[@id='MresourceScrapIron']/property[@name='Experience']/@value">.9</set>
+	<set xpath="/materials/material[@id='Msand']/property[@name='Experience']/@value">1.1</set>
+	<set xpath="/materials/material[@id='Msandstone']/property[@name='Experience']/@value">1.1</set>
+-->

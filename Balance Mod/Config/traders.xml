@@ -1,0 +1,9 @@
+<BetterBalanceMod>
+<!-- Better pricing -->
+		<set xpath="/traders/@quality_mod">1,6</set>
+		<set xpath="/traders/@buy_markup">1.25</set>
+		<set xpath="/traders/@sell_markdown">0.1</set>
+		</BetterBalanceMod>
+<!--
+wip
+-->

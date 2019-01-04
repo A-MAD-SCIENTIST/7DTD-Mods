@@ -1,0 +1,158 @@
+<BetterBalanceMod>
+<!-- Added receipes -->
+	<append xpath="/recipes">
+	<!-- Spikes -->
+		<recipe name="woodLogSpike1" count="1">
+			<ingredient name="resourceWood" count="12"/>
+		</recipe>
+		<recipe name="scrapIronLogSpike4" count="1">
+			<ingredient name="resourceScrapIron" count="20"/>
+		</recipe>
+	<!-- Steel polish -->		
+		<recipe name="resourceSteelPolish" count="10" craft_area="chemistryStation" craft_time = "15">
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceGlue" count="1"/>
+		</recipe>
+	<!-- Additional mining helmets -->
+		<recipe name="armorMiningHelmetMilitary" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="armorMilitaryHelmet" count="1"/>
+			<ingredient name="meleeToolFlashlight02" count="1"/>
+			<ingredient name="resourceElectricParts" count="8"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="4"/>
+		</recipe>
+		<recipe name="armorMiningHelmetSteel" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="armorSteelHelmet" count="1"/>
+			<ingredient name="meleeToolFlashlight02" count="1"/>
+			<ingredient name="resourceElectricParts" count="8"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="4"/>
+		</recipe>
+		<recipe name="armorMiningHelmetSwat" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="armorSwatHelmet" count="1"/>
+			<ingredient name="meleeToolFlashlight02" count="1"/>
+			<ingredient name="resourceElectricParts" count="8"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="4"/>
+		</recipe>
+	</append>
+<!-- Reduce materials required -->
+	<!-- Anvil -->
+		<set xpath="/recipes/recipe[@name='toolAnvil']/ingredient[@name='unit_iron']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='toolAnvil']/ingredient[@name='unit_clay']/@count">40</set>
+	<!-- Traps -->
+		<set xpath="/recipes/recipe[@name='trapSpikesWoodDmg0']/ingredient[@name='resourceWood']/@count">16</set>	
+	<!-- Raw meat -->
+		<set xpath="/recipes/recipe/ingredient[@name='foodRawMeat' and @count='5']/@count">2</set>
+		<set xpath="/recipes/recipe/ingredient[@name='foodRawMeat' and @count='10']/@count">6</set>
+	<!-- Scrap Iron -->
+		<set xpath="/recipes/recipe/ingredient[@name='resourceScrapIron' and @count='10']/@count">8</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceScrapIron' and @count='15']/@count">12</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceScrapIron' and @count='25']/@count">20</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceScrapIron' and @count='40']/@count">30</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceScrapIron' and @count='50']/@count">40</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceScrapIron' and @count='100']/@count">60</set>		
+		<set xpath="/recipes/recipe/ingredient[@name='resourceScrapIron' and @count='120']/@count">80</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceScrapIron' and @count='240']/@count">150</set>
+	<!-- Iron bars -->
+		<set xpath="/recipes/recipe[@name='ironBars']/ingredient[@name='unit_iron']/@count">20</set>	
+		<set xpath="/recipes/recipe[@name='ironBars']/ingredient[@name='unit_clay']/@count">10</set>	
+		<set xpath="/recipes/recipe[@name='ironBarsCentered']/ingredient[@name='unit_iron']/@count">20</set>	
+		<set xpath="/recipes/recipe[@name='ironBarsCentered']/ingredient[@name='unit_clay']/@count">10</set>	
+	<!-- Forged Steel -->
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedSteel' and @count='5']/@count">4</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedSteel' and @count='10']/@count">8</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedSteel' and @count='12']/@count">10</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedSteel' and @count='20']/@count">16</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedSteel' and @count='24']/@count">20</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedSteel' and @count='30']/@count">24</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedSteel' and @count='32']/@count">26</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedSteel' and @count='40']/@count">34</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedSteel' and @count='50']/@count">40</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedSteel' and @count='150']/@count">100</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedSteel' and @count='300']/@count">200</set>
+	<!-- Forged Iron -->
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='3']/@count">2</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='4']/@count">3</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='5']/@count">4</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='8']/@count">6</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='10']/@count">8</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='12']/@count">10</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='15']/@count">12</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='16']/@count">12</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='20']/@count">16</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='24']/@count">20</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='30']/@count">24</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='40']/@count">34</set>
+	<!-- Duct tape -->
+		<set xpath="/recipes/recipe/ingredient[@name='resourceDuctTape' and @count='4']/@count">3</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceDuctTape' and @count='5']/@count">4</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceDuctTape' and @count='10']/@count">8</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceDuctTape' and @count='12']/@count">10</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceDuctTape' and @count='16']/@count">12</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceDuctTape' and @count='25']/@count">20</set>
+</BetterBalanceMod>
+
+<!-- WIP
+
+	Line 1423: 	<ingredient name="modGunBarrelExtenderSchematic" count="1"/>
+	Line 1431: 	<ingredient name="modGunMuzzleBrakeSchematic" count="1"/>
+	Line 1439: 	<ingredient name="modGunSoundSuppressorSilencerSchematic" count="1"/>
+	Line 1447: 	<ingredient name="modGunLaserSightSchematic" count="1"/>
+	Line 1455: 	<ingredient name="modGunFlashlightSchematic" count="1"/>
+	Line 1463: 	<ingredient name="modGunScopeSmallSchematic" count="1"/>
+	Line 1471: 	<ingredient name="modGunScopeMediumSchematic" count="1"/>
+	Line 1479: 	<ingredient name="modGunScopeLargeSchematic" count="1"/>
+	Line 1487: 	<ingredient name="modGunReflexSightSchematic" count="1"/>
+	Line 1495: 	<ingredient name="modGunTriggerGroupSemiSchematic" count="1"/>
+	Line 1503: 	<ingredient name="modGunTriggerGroupBurstSchematic" count="1"/>
+	Line 1511: 	<ingredient name="modGunTriggerGroupAutomaticSchematic" count="1"/>
+	Line 1519: 	<ingredient name="modGunRodAndSpringSchematic" count="1"/>
+	Line 1529: 	<ingredient name="modGunBipodSchematic" count="1"/>
+	Line 1537: 	<ingredient name="modGunForegripSchematic" count="1"/>
+	Line 1545: 	<ingredient name="modGunRetractingStockSchematic" count="1"/>
+	Line 1553: 	<ingredient name="modGunDuckbillSchematic" count="1"/>
+	Line 1561: 	<ingredient name="modGunChokeSchematic" count="1"/>
+	Line 1569: 	<ingredient name="modGunMagazineExtenderSchematic" count="1"/>
+	Line 1577: 	<ingredient name="modShotgunSawedOffBarrelSchematic" count="1"/>
+	Line 1586: 	<ingredient name="modGunMeleeFeelTheHeatSchematic" count="1"/>
+	Line 1595: 	<ingredient name="modGunCrippleEmSchematic" count="1"/>
+	Line 1603: 	<ingredient name="modGunBowPolymerStringSchematic" count="1"/>
+	Line 1611: 	<ingredient name="modGunMeleeTheHunterSchematic" count="1"/>
+	Line 1620: 	<ingredient name="modGunMeleeRadRemoverSchematic" count="1"/>
+	Line 1630: 	<ingredient name="modGunMeleeBlessedMetalSchematic" count="1"/>
+	Line 1639: 	<ingredient name="modMeleeTemperedBladeSchematic" count="1"/>
+	Line 1647: 	<ingredient name="modMeleeSerratedBladeSchematic" count="1"/>
+	Line 1655: 	<ingredient name="modMeleeWeightedHeadSchematic" count="1"/>
+	Line 1663: 	<ingredient name="modMeleeStructuralBraceSchematic" count="1"/>
+	Line 1671: 	<ingredient name="modMeleeErgonomicGripSchematic" count="1"/>
+	Line 1679: 	<ingredient name="modMeleeFortifyingGripSchematic" count="1"/>
+	Line 1687: 	<ingredient name="modMeleeClubBarbedWireSchematic" count="1"/>
+	Line 1695: 	<ingredient name="modMeleeClubMetalSpikesSchematic" count="1"/>
+	Line 1703: 	<ingredient name="modMeleeGraveDiggerSchematic" count="1"/>
+	Line 1711: 	<ingredient name="modMeleeBunkerBusterSchematic" count="1"/>
+	Line 1719: 	<ingredient name="modMeleeIronBreakerSchematic" count="1"/>
+	Line 1727: 	<ingredient name="modMeleeWoodSplitterSchematic" count="1"/>
+	Line 1735: 	<ingredient name="modMeleeClubBurningShaftSchematic" count="1"/>
+	Line 1742: 	<ingredient name="modArmorBandolierSchematic" count="1"/>
+	Line 1750: 	<ingredient name="modArmorInsulatedLinerSchematic" count="1"/>
+	Line 1757: 	<ingredient name="modArmorCoolingMeshSchematic" count="1"/>
+	Line 1765: 	<ingredient name="modArmorReinforcedPaddingSchematic" count="1"/>
+	Line 1773: 	<ingredient name="modArmorPlasticPlatingSchematic" count="1"/>
+	Line 1781: 	<ingredient name="modArmorMilitaryPlatingSchematic" count="1"/>
+	Line 1789: 	<ingredient name="modArmorScrapPlatingSchematic" count="1"/>
+	Line 1797: 	<ingredient name="modArmorIronPlatingSchematic" count="1"/>
+	Line 1805: 	<ingredient name="modArmorSteelPlatingSchematic" count="1"/>
+	Line 1813: 	<ingredient name="modArmorSpikedKnucklesSchematic" count="1"/>
+	Line 1821: 	<ingredient name="modArmorImprovedFittingsSchematic" count="1"/>
+	Line 1829: 	<ingredient name="modArmorCustomizedFittingsSchematic" count="1"/>
+	Line 1837: 	<ingredient name="modArmorStoragePocketSchematic" count="1"/>
+	Line 1845: 	<ingredient name="modArmorDoubleStoragePocketSchematic" count="1"/>
+	Line 1853: 	<ingredient name="modArmorTripleStoragePocketSchematic" count="1"/>
+	Line 1861: 	<ingredient name="modArmorMuffledConnectorsSchematic" count="1"/>
+	Line 1869: 	<ingredient name="modArmorAdvancedMuffledConnectorsSchematic" count="1"/>
+	Line 1877: 	<ingredient name="modArmorImpactBracingSchematic" count="1"/>
+	Line 1885: 	<ingredient name="modArmorWaterPurifierSchematic" count="1"/>
+	Line 1893: 	<ingredient name="modArmorHelmetLightSchematic" count="1"/>
+	
+	-->
