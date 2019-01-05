@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
 	<ModInfo>
-		<Name value="Balance Mod A17" />
-		<Description value="See README for changes. Makes A17 more fun. NOTE: other mods active may cause conflicts. With thanks to survivoruk, stedman420 & CosmicMan (Will K). Special thanks to my mother <3 " />
-		<Author value="Kath"/>
+		<Name value="BetterBalanceMod" />
+		<Description value="See README for changes. Makes A17 more fun. NOTE: other mods active may cause conflicts. With thanks to survivoruk, stedman420 & CosmicMan (Will K). Special thanks to my mother xxxx " />
+		<Author value="Survivoruk/CosmicMan/stedman420/Kath"/>
 		<Version value="3.0" />
 		<Website value="https://7daystodie.com/" />
 	</ModInfo>
